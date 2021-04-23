@@ -1,0 +1,97 @@
+<mvc:View
+    controllerName="com.demo.pcm.partnerregistration2.controller.PartnerRegistration"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:m="sap.m"
+    id="appRegistrationView"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <IconTabBar
+                            expandable="false"
+                            id="wizardTabBar"
+                            select="wizardSelectTab">
+                            <items>
+                                <IconTabFilter
+
+                                        iconColor="Positive"
+                                        design="Vertical"
+
+                                        text="{i18n>Step0.Title}"
+
+                                        key="BecomeAPartner">
+
+                                </IconTabFilter>
+
+                                <IconTabSeparator icon="sap-icon://open-command-field"/>
+                                <IconTabFilter
+
+                                        iconColor="Positive"
+                                        design="Vertical"
+
+                                        text="{i18n>Step1.Title}"
+                                        key="CompanyInformation"/>
+                                <IconTabSeparator icon="sap-icon://open-command-field"/>
+                                <IconTabFilter
+
+                                        iconColor="Positive"
+                                        design="Vertical"
+
+                                        text="{i18n>Step2.Title}"
+                                        key="ContactInformation"/>
+                                <IconTabSeparator icon="sap-icon://open-command-field"/>
+                                <IconTabFilter
+
+                                        iconColor="Positive"
+                                        design="Vertical"
+
+                                        text="{i18n>Step3.Title}"
+                                        key="AdditionalInformation"/>
+
+                            </items>
+                        </IconTabBar>
+                        <NavContainer
+                                id="wizardContent"
+
+                                class="navContainerControl">
+
+                            <pages id="wizard-steps">
+
+                                <m:Page id="BecomeAPartnerPage" showHeader="false">
+                                    <core:Fragment fragmentName="com.demo.pcm.partnerregistration2.view.steps.BecomeAPartner" type="XML"/>
+                                </m:Page>
+                                <m:Page id="CompanyInformationPage" showHeader="false">
+                                    <core:Fragment fragmentName="com.demo.pcm.partnerregistration2.view.steps.CompanyInformation" type="XML"/>
+                                </m:Page>
+
+                                <m:Page id="ContactInformationPage" showHeader="false">
+                                    <core:Fragment fragmentName="com.demo.pcm.partnerregistration2.view.steps.ContactInformation" type="XML"/>
+                                </m:Page>
+                                <m:Page id="AdditionalInformationPage" showHeader="false">
+                                    <core:Fragment fragmentName="com.demo.pcm.partnerregistration2.view.steps.AdditionalInformation" type="XML"/>
+                                </m:Page>
+                                <m:Page id="SuccessPage" showHeader="false">
+                                    <core:Fragment fragmentName="com.demo.pcm.partnerregistration2.view.steps.Success" type="XML"/>
+                                </m:Page>
+                            </pages>
+                        </NavContainer>
+                    </content>
+                    <footer>
+                        <Toolbar>
+                            <ToolbarSpacer/>
+                            <Button id="backBtn" text="{i18n>Button.Back}" press="back"/>
+                            <Button id="next_submit" text="{i18n>Button.Continue}" press="next" />
+                        </Toolbar>
+                    </footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
