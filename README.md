@@ -1,3 +1,9 @@
+## build
+
+mbt build -s .
+mbt build
+
+
 ## Application Details
 |               |
 | ------------- |
