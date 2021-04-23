@@ -78,7 +78,16 @@
                 "settings": {
                     "bundleName": "com.demo.pcm.partnerregistration2.i18n.i18n"
                 }
-            }
+            },
+            "": {
+				"dataSource": "mainService",
+                "settings": {
+                    "autoExpandSelect": true,
+                    "operationMode": "Server",
+                    "groupId": "$direct",
+                    "synchronizationMode": "None"
+                }
+			}
         },
         "resources": {
             "css": [
